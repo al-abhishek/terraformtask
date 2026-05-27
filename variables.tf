@@ -7,11 +7,11 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "S3 Bucket Name"
   type        = string
-  default     = "abhi-demo-2026-event"
+  default     = "abhi-demo-2026-event-001"
 }
 
 variable "dynamodb_name" {
   description = "dynamo db table"
-  type = string
-  default = "payload-table"
+  type        = string
+  default     = "payload-table"
 }
