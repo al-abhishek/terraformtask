@@ -59,13 +59,14 @@ resource "aws_iam_role_policy" "lambda_policy" {
       },
 
       {
-        Effect = "Allow",
-        Action = [
-          "kms:Decrypt",
-          "kms:Encrypt"
-        ],
-        Resource = "*"
-      },
+  Effect = "Allow",
+  Action = [
+    "kms:Decrypt",
+    "kms:Encrypt",
+    "kms:GenerateDataKey"
+  ],
+  Resource = aws_kms_key.s3_kms.arn
+},
 
       {
         Effect = "Allow",
