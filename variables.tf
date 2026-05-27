@@ -9,3 +9,9 @@ variable "bucket_name" {
   type        = string
   default     = "abhi-demo-2026-event"
 }
+
+variable "dynamodb_name" {
+  description = "dynamo db table"
+  type = string
+  default = "payload-table"
+}
